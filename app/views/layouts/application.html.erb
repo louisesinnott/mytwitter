@@ -26,9 +26,12 @@
         </header>
          <%= render 'layouts/header' %>
         <div class="container">
+<<<<<<< HEAD
           <% flash.each do |key, value| %>         <!-- START NEW CODE  -->
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>                                 <!-- END NEW CODE  -->
+=======
+>>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>     <!--NEW LINE -->

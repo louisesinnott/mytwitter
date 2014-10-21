@@ -144,7 +144,11 @@ $grayMediumLight: #eaeaea;
       margin-right: 10px;
     }
 
+<<<<<<< HEAD
     /* forms */
+=======
+     /* forms */
+>>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
 
     input, textarea, select, .uneditable-input {
       border: 1px solid #bbb;
@@ -166,4 +170,8 @@ $grayMediumLight: #eaeaea;
     .field_with_errors {
       @extend .control-group;
       @extend .error;
+<<<<<<< HEAD
      }
+=======
+     }
+>>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
