@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   match '/about',   to: 'static_pages#about', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'users#new', via: 'get'
+  match '/signin',  to: 'sessions#new', via: 'get'         # NEW LINE
+      match '/signout', to: 'sessions#destroy', via: :delete    # NEW LINE
   
 
       resources :users       # NEW LINE
+      resources :sessions, only: [:new, :create, :destroy]  # NEW LINE
 
      
 
