@@ -11,10 +11,10 @@ Rails.application.routes.draw do
   
 
       resources :users       # NEW LINE
-<<<<<<< HEAD
+
       resources :sessions, only: [:new, :create, :destroy]  # NEW LINE
-=======
->>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
+
+      resources :microposts, only: [:create, :destroy]     # NEW LINE
 
      
 

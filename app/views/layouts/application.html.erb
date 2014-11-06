@@ -10,31 +10,15 @@
         <![endif]-->
       </head>
       <body>
-        <header class="navbar navbar-fixed-top navbar-inverse">
-          <div class="navbar-inner">
-            <div class="container">
-              <%= link_to "sample app", '#', id: "logo" %>
-              <nav>
-                <ul class="nav pull-right">
-                  <li><%= link_to "Home",    '#' %></li>
-                  <li><%= link_to "Help",    '#' %></li>
-                  <li><%= link_to "Sign in", '#' %></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
-         <%= render 'layouts/header' %>
+        <body>
+        <%= render 'layouts/header' %>
         <div class="container">
-<<<<<<< HEAD
           <% flash.each do |key, value| %>         <!-- START NEW CODE  -->
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>                                 <!-- END NEW CODE  -->
-=======
->>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>     <!--NEW LINE -->
-    </div>
+          <%= yield %>
+          <%= render 'layouts/footer' %>    <!-- NEW LINE -->
+          <%= debug(params) if Rails.env.development? %>     <!--NEW LINE -->
+        </div>
       </body>
     </html>

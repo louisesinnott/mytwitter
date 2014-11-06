@@ -1,6 +1,16 @@
-@import "bootstrap";
+ @import "bootstrap";
 
-    /* universal */
+ /* mixins, variables, etc. */
+
+    $grayMediumLight: #eaeaea;
+
+    @mixin box_sizing {
+      -moz-box-sizing: border-box; 
+      -webkit-box-sizing: border-box; 
+      box-sizing: border-box;
+    }
+
+ /* universal */
 
     html {
       overflow-y: scroll;
@@ -57,7 +67,7 @@
       float: left;
       margin-right: 10px;
       font-size: 1.7em;
-      color: #fff;
+      color: #999;
       text-transform: uppercase;
       letter-spacing: -1px;
       padding-top: 9px;
@@ -69,7 +79,8 @@
       color: #fff;
       text-decoration: none;
     }
-        /* footer */
+
+    /* footer */
 
     footer {
       margin-top: 45px;
@@ -100,13 +111,7 @@
       margin-left: 10px;
     }
 
-$grayMediumLight: #eaeaea;
-
-    @mixin box_sizing {
-      -moz-box-sizing: border-box; 
-      -webkit-box-sizing: border-box; 
-      box-sizing: border-box;
-    }
+    /* miscellaneous */
 
     .debug_dump {
       clear: both;
@@ -115,6 +120,7 @@ $grayMediumLight: #eaeaea;
       margin-top: 45px;
       @include box_sizing;
     }
+
     /* sidebar */
 
     aside {
@@ -144,11 +150,7 @@ $grayMediumLight: #eaeaea;
       margin-right: 10px;
     }
 
-<<<<<<< HEAD
     /* forms */
-=======
-     /* forms */
->>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
 
     input, textarea, select, .uneditable-input {
       border: 1px solid #bbb;
@@ -170,8 +172,32 @@ $grayMediumLight: #eaeaea;
     .field_with_errors {
       @extend .control-group;
       @extend .error;
-<<<<<<< HEAD
      }
-=======
-     }
->>>>>>> ed27b70c447f10b7d81f9e5919292b01c205089c
+
+     /* microposts */
+
+    .microposts {
+      list-style: none;
+      margin: 10px 0 0 0;
+
+      li {
+        padding: 10px 0;
+        border-top: 1px solid #e8e8e8;
+      }
+    }
+    .content {
+      display: block;
+    }
+    .timestamp {
+      color: $grayLight;
+    }
+    .gravatar {
+      float: left;
+      margin-right: 10px;
+    }
+    aside {
+      textarea {
+        height: 100px;
+        margin-bottom: 5px;
+      }
+    } 

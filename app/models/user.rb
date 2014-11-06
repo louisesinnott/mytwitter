@@ -1,4 +1,5 @@
     class User < ActiveRecord::Base
+      has_many :microposts, dependent: :destroy   #  CHANGED
     	# Replace current before_save code with the following:
       before_save do |user| 
               user.email = email.downcase 
@@ -14,4 +15,8 @@
     validates :password, presence: true, length: { minimum: 6 }
     validates :password_confirmation, presence: true
      has_secure_password  
+
+     def feed
+            Micropost.where("user_id = ?", id)
+          end
     end    
