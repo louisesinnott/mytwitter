@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
       resources :microposts, only: [:create, :destroy]     # NEW LINE
 
+      resources :films, only: [:new, :create, :index]
+
      
 
   # The priority is based upon order of creation: first created -> highest priority.
